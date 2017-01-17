@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Roboto Slab'. sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 ul {
@@ -11,4 +11,17 @@ ul {
 
 img {
   max-width: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
 }

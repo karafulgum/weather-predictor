@@ -3,12 +3,25 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Weather Predictor</title>
+    <title>What's The Weather?</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Yeseva+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+
+    {{content-for "head"}}
+
+    <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+    <link rel="stylesheet" href="{{rootURL}}assets/weather-predictor.css">
+
+    {{content-for "head-footer"}}
   </head>
   <body>
+    {{content-for "body"}}
+
+    <script src="{{rootURL}}assets/vendor.js"></script>
+    <script src="{{rootURL}}assets/weather-predictor.js"></script>
+
+    {{content-for "body-footer"}}
   </body>
 </html>
