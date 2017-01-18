@@ -1,9 +1,7 @@
 .hero {
-  // position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
-  // width: 100%;
   background: url('../images/cloud.jpg') no-repeat center;
   background-size: cover;
   height: 15rem;
@@ -25,6 +23,11 @@
 
   &__form {
     padding-top: 0.5rem;
+
+    @media (max-width: 420px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__input {
@@ -34,6 +37,10 @@
 
     &:focus {
       outline: 2px solid $c-black;
+    }
+
+    @media (max-width: 420px) {
+      margin: 0.2rem 0;
     }
   }
 
@@ -54,5 +61,14 @@
     border: 2px solid #000;
     border-radius: 0.4rem;
     cursor: pointer;
+
+    &:hover {
+      background-color: $c-black;
+      color: #fff;
+    }
+
+    @media (max-width: 420px) {
+      margin: 0.6rem 0;
+    }
   }
 }

@@ -1,6 +1,21 @@
 .weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  &__location {
+  &__state {
+    font-family: 'Yeseva One', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+
+    &::after {
+      content: ',';
+    }
+  }
+
+  &__city {
+    padding-left: 0.4rem;
     font-family: 'Yeseva One', sans-serif;
     font-size: 2rem;
     text-align: center;
@@ -21,6 +36,15 @@
     margin-top: 0;
     padding-left: 0.5rem;
     font-size: 2rem;
+
+    &::after {
+      content: '°';
+    }
+  }
+
+  &__feels {
+    margin-top: 0;
+    text-align: center;
 
     &::after {
       content: '°';
