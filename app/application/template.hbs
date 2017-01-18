@@ -69,4 +69,19 @@
       {{/simple-form}}
     </div>
   </div>
+
+  <div class="app__main">
+    <div class="container">
+      {{!-- {{#each model as |value|}} --}}
+        <div class="weather">
+          <p class="weather__location">{{model.current_observation.display_location.city}}</p>
+          <div class="weather__group">
+            <img src="{{model.current_observation.icon_url}}" class="weather__icon" alt="">
+            <p class="weather__temp">{{model.current_observation.temp_f}}</p>
+          </div>
+      {{!-- {{/each}} --}}
+      {{log model}}
+    </div>
+  </div>
+</div>
 </div>

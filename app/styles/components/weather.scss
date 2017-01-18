@@ -1,0 +1,29 @@
+.weather {
+
+  &__location {
+    font-family: 'Yeseva One', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &__group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    padding-bottom: 0.4rem;
+    height: 4rem;
+  }
+
+  &__temp {
+    margin-top: 0;
+    padding-left: 0.5rem;
+    font-size: 2rem;
+
+    &::after {
+      content: '°';
+    }
+  }
+}
