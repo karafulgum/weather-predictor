@@ -8,33 +8,15 @@
   background: $c-white;
   width: 60%;
 
-  &__state {
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 0.3rem 0;
-
-    &::after {
-      content: ',';
-    }
-  }
-
   &__arrow-down {
     position: absolute;
     left: 1.5rem;
-    top: 2.38rem;
+    top: 2.3rem;
     width: 0;
     height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     border-top: 15px solid $c-location;
-  }
-
-
-  &__city {
-    padding-left: 0.4rem;
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 0.3rem 0;
   }
 
   &__header {
@@ -45,18 +27,32 @@
     color: $c-white;
   }
 
+  &__city {
+    padding-left: 0.4rem;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0.3rem 0;
+  }
+
+  &__state {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0.3rem 0;
+
+    &::after {
+      content: ',';
+    }
+  }
+
   &__group {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 50%;
-
-    &--temp {
-      margin-top: 2rem;
-    }
   }
 
   &__icon {
+    margin: 1rem 0;
     padding-bottom: 0.4rem;
     height: 4rem;
   }
@@ -68,6 +64,8 @@
   }
 
   &__title {
+    margin: 0;
+    font-size: 1.3rem;
     text-align: center;
   }
 

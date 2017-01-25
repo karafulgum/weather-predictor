@@ -1,67 +1,67 @@
 <div class="app">
   <div class="hero">
     <div class="hero__main">
-      <p class="hero__logo">what's the card?</p>
+      <p class="hero__logo">what's the weather?</p>
     </div>
   </div>
 
   <div class="app__main">
     <div class="container">
-      {{#simple-form as |formValues|}}
+      {{#simple-form onsubmit=(action "searchLocation" state city) as |formValues|}}
         <div class="form">
-          <label for="city" class="form__label">city</label> {{input class="form__input" value=formValues.city id="city"}}
+          <label for="city" class="form__label">city</label> {{input class="form__input" value=city id="city"}}
           <label for="state" class="form__label">state</label>
-          <select class="form__input" id="state">
-            <option value=formvalues.current_observation.display_location.state>AL</option>
-            <option value=formvalues.current_observation.display_location.state>AK</option>
-            <option value=formvalues.current_observation.display_location.state>AZ</option>
-            <option value=formvalues.current_observation.display_location.state>AR</option>
-            <option value=formvalues.current_observation.display_location.state>CA</option>
-            <option value=formvalues.current_observation.display_location.state>CO</option>
-            <option value=formvalues.current_observation.display_location.state>CT</option>
-            <option value=formvalues.current_observation.display_location.state>DE</option>
-            <option value=formvalues.current_observation.display_location.state>FL</option>
-            <option value=formvalues.current_observation.display_location.state>GA</option>
-            <option value=formvalues.current_observation.display_location.state>HI</option>
-            <option value=formvalues.current_observation.display_location.state>ID</option>
-            <option value=formvalues.current_observation.display_location.state>IL</option>
-            <option value=formvalues.current_observation.display_location.state>IN</option>
-            <option value=formvalues.current_observation.display_location.state>IA</option>
-            <option value=formvalues.current_observation.display_location.state>KS</option>
-            <option value=formvalues.current_observation.display_location.state>KY</option>
-            <option value=formvalues.current_observation.display_location.state>LA</option>
-            <option value=formvalues.current_observation.display_location.state>ME</option>
-            <option value=formvalues.current_observation.display_location.state>MD</option>
-            <option value=formvalues.current_observation.display_location.state>MA</option>
-            <option value=formvalues.current_observation.display_location.state>MI</option>
-            <option value=formvalues.current_observation.display_location.state>MN</option>
-            <option value=formvalues.current_observation.display_location.state>MS</option>
-            <option value=formvalues.current_observation.display_location.state>MO</option>
-            <option value=formvalues.current_observation.display_location.state>MT</option>
-            <option value=formvalues.current_observation.display_location.state>NE</option>
-            <option value=formvalues.current_observation.display_location.state>NV</option>
-            <option value=formvalues.current_observation.display_location.state>NH</option>
-            <option value=formvalues.current_observation.display_location.state>NJ</option>
-            <option value=formvalues.current_observation.display_location.state>NM</option>
-            <option value=formvalues.current_observation.display_location.state>NY</option>
-            <option value=formvalues.current_observation.display_location.state>NC</option>
-            <option value=formvalues.current_observation.display_location.state>ND</option>
-            <option value=formvalues.current_observation.display_location.state>OH</option>
-            <option value=formvalues.current_observation.display_location.state>OK</option>
-            <option value=formvalues.current_observation.display_location.state>OR</option>
-            <option value=formvalues.current_observation.display_location.state>PA</option>
-            <option value=formvalues.current_observation.display_location.state>RI</option>
-            <option value=formvalues.current_observation.display_location.state>SC</option>
-            <option value=formvalues.current_observation.display_location.state>SD</option>
-            <option value=formvalues.current_observation.display_location.state>TN</option>
-            <option value=formvalues.current_observation.display_location.state>TX</option>
-            <option value=formvalues.current_observation.display_location.state>UT</option>
-            <option value=formvalues.current_observation.display_location.state>VT</option>
-            <option value=formvalues.current_observation.display_location.state>VA</option>
-            <option value=formvalues.current_observation.display_location.state>WA</option>
-            <option value=formvalues.current_observation.display_location.state>WV</option>
-            <option value=formvalues.current_observation.display_location.state>WI</option>
-            <option value=formvalues.current_observation.display_location.state>WY</option>
+          <select class="form__input" id="state" onchange={{action (mut state) value="target.value"}}>
+            <option>AL</option>
+            <option>AK</option>
+            <option>AZ</option>
+            <option>AR</option>
+            <option>CA</option>
+            <option>CO</option>
+            <option>CT</option>
+            <option>DE</option>
+            <option>FL</option>
+            <option>GA</option>
+            <option>HI</option>
+            <option>ID</option>
+            <option>IL</option>
+            <option>IN</option>
+            <option>IA</option>
+            <option>KS</option>
+            <option>KY</option>
+            <option>LA</option>
+            <option>ME</option>
+            <option>MD</option>
+            <option>MA</option>
+            <option>MI</option>
+            <option>MN</option>
+            <option>MS</option>
+            <option>MO</option>
+            <option>MT</option>
+            <option>NE</option>
+            <option>NV</option>
+            <option>NH</option>
+            <option>NJ</option>
+            <option>NM</option>
+            <option>NY</option>
+            <option>NC</option>
+            <option>ND</option>
+            <option>OH</option>
+            <option>OK</option>
+            <option>OR</option>
+            <option>PA</option>
+            <option>RI</option>
+            <option>SC</option>
+            <option>SD</option>
+            <option>TN</option>
+            <option>TX</option>
+            <option>UT</option>
+            <option>VT</option>
+            <option>VA</option>
+            <option>WA</option>
+            <option>WV</option>
+            <option>WI</option>
+            <option>WY</option>
           </select>
           <button class="form__button">submit</button>
         </div>
@@ -72,11 +72,11 @@
             <p class="card__city">{{model.current_observation.display_location.state}}</p>
             <div class="card__arrow-down"></div>
           </div>
+          <img src="{{model.current_observation.icon_url}}" class="card__icon" alt="">
           <div class="card__group">
             <div class="card__group--temp">
             <p class="card__title">Currently:</p>
               <div class="card__icon-group">
-                <img src="{{model.current_observation.icon_url}}" class="card__icon" alt="">
                 <p class="card__temp">{{model.current_observation.temp_f}}</p>
               </div>
             </div>
