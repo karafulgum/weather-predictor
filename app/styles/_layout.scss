@@ -6,11 +6,11 @@
 
 .app {
   display: flex;
+  height: 100vh;
   flex-direction: column;
-
 
   &__main {
     flex-grow: 1;
-    // overflow-y: scroll;
+    background: $c-background;
   }
 }
