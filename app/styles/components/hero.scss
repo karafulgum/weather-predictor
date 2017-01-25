@@ -2,50 +2,55 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('../images/cloud.jpg') no-repeat center;
+  background: url('../images/cloud.jpg') no-repeat;
   background-size: cover;
-  height: 15rem;
-  box-shadow: $box-shadow;
+  height: 20rem;
+  color: $c-white;
 
   &__main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1.5rem;
+    width: 40%;
+    // background: #c6c4c5;
+    background-clip: padding-box;
+    border: 2px solid $c-white;
+    background: rgba(220,215,221,.35);
   }
 
   &__logo {
     margin: 0;
-    font-family: 'Yeseva One', sans-serif;
     font-size: 3rem;
     text-align: center;
   }
 
-  &__form {
-    padding-top: 0.5rem;
-
-    @media (max-width: 420px) {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
-  &__input {
-    font-family: 'Merriweather Sans', sans-serif;
-    border-radius: 0.4rem;
-    outline: 0;
-
-    &:focus {
-      outline: 2px solid $c-black;
-    }
-
-    @media (max-width: 420px) {
-      margin: 0.2rem 0;
-    }
-  }
+  // &__form {
+  //   padding-top: 0.5rem;
+  //
+  //   @media (max-width: 420px) {
+  //     display: flex;
+  //     flex-direction: column;
+  //   }
+  // }
+  //
+  // &__input {
+  //   font-family: 'Fira Sans Condensed', sans-serif;
+  //   border-radius: 0.4rem;
+  //   outline: 0;
+  //
+  //   &:focus {
+  //     outline: 2px solid $c-black;
+  //   }
+  //
+  //   @media (max-width: 420px) {
+  //     margin: 0.2rem 0;
+  //   }
+  // }
 
   &__select {
-    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Fira Sans Condensed', sans-serif;
     outline: 0;
 
     &:focus {
@@ -57,9 +62,9 @@
     background-color: Transparent;
     background-repeat: no-repeat;
     outline: none;
-    font-family: 'Merriweather Sans', sans-serif;
-    border: 2px solid #000;
+    border: 2px solid $c-white;
     border-radius: 0.4rem;
+    font-family: 'Fira Sans Condensed', sans-serif;
     cursor: pointer;
 
     &:hover {
