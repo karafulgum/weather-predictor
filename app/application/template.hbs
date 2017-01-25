@@ -2,11 +2,16 @@
   <div class="hero">
     <div class="hero__main">
       <p class="hero__logo">what's the weather?</p>
-      {{#simple-form onsubmit=(action "searchLocation") as |formValues|}}
-        <div class="hero__form">
-          <label for="city" class="hero__label">city</label> {{input class="hero__input" value=formvalues.current_observation.display_location.state id="city"}}
-          <label for="state" class="hero__label">state</label>
-          <select class="hero__select" id="state">
+    </div>
+  </div>
+
+  <div class="app__main">
+    <div class="container">
+      {{#simple-form as |formValues|}}
+        <div class="form">
+          <label for="city" class="form__label">city</label> {{input class="form__input" value=formValues.city id="city"}}
+          <label for="state" class="form__label">state</label>
+          <select class="form__input" id="state">
             <option value=formvalues.current_observation.display_location.state>AL</option>
             <option value=formvalues.current_observation.display_location.state>AK</option>
             <option value=formvalues.current_observation.display_location.state>AZ</option>
@@ -57,31 +62,29 @@
             <option value=formvalues.current_observation.display_location.state>WV</option>
             <option value=formvalues.current_observation.display_location.state>WI</option>
             <option value=formvalues.current_observation.display_location.state>WY</option>
-            </select>{{!-- {{#power-select
-            options=state
-            selected=formValues.quantity
-            onchange=(action (mut formValues.quantity))
-            as |value|}}
-            {{value}}
-          {{/power-select}} --}}
-          <button class="hero__button">Submit</button>
+          </select>
+          <button class="form__button">submit</button>
         </div>
       {{/simple-form}}
-    </div>
-  </div>
-
-  <div class="app__main">
-    <div class="container">
-        <div class="weather">
-          <div class="weather__group">
-            <p class="weather__state">{{model.current_observation.display_location.city}}</p>
-            <p class="weather__city">{{model.current_observation.display_location.state}}</p>
+        <div class="card">
+          <div class="card__header">
+            <p class="card__state">{{model.current_observation.display_location.city}}</p>
+            <p class="card__city">{{model.current_observation.display_location.state}}</p>
+            <div class="card__arrow-down"></div>
           </div>
-          <div class="weather__group">
-            <img src="{{model.current_observation.icon_url}}" class="weather__icon" alt="">
-            <p class="weather__temp">{{model.current_observation.temp_f}}</p>
+          <div class="card__group">
+            <div class="card__group--temp">
+            <p class="card__title">Currently:</p>
+              <div class="card__icon-group">
+                <img src="{{model.current_observation.icon_url}}" class="card__icon" alt="">
+                <p class="card__temp">{{model.current_observation.temp_f}}</p>
+              </div>
+            </div>
+            <div class="card__group--temp">
+              <p class="card__title">Feels like:</p>
+              <p class="card__feels">{{model.current_observation.feelslike_f}}</p>
+            </div>
           </div>
-          <p class="weather__feels">Feels like: {{model.current_observation.feelslike_f}}</p>
     </div>
   </div>
 </div>
