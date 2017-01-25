@@ -1,13 +1,14 @@
 $c-black: #000000;
 $c-white: #ffffff;
-$c-background: #ECEAE9;
-$c-input: #E4C0C5;
+$c-background: #eceae9;
+$c-input: #e4c0c5;
+$c-location: #6d815d;
 $box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
-
 @import 'reset';
 @import 'layout';
 @import 'components/hero';
-@import 'components/weather';
+@import 'components/card';
 @import 'components/form';
 // @import 'ember-power-select';
+//
 //

@@ -1,7 +1,7 @@
 <div class="app">
   <div class="hero">
     <div class="hero__main">
-      <p class="hero__logo">what's the weather?</p>
+      <p class="hero__logo">what's the card?</p>
     </div>
   </div>
 
@@ -66,16 +66,25 @@
           <button class="form__button">submit</button>
         </div>
       {{/simple-form}}
-        <div class="weather">
-          <div class="weather__group">
-            <p class="weather__state">{{model.current_observation.display_location.city}}</p>
-            <p class="weather__city">{{model.current_observation.display_location.state}}</p>
+        <div class="card">
+          <div class="card__header">
+            <p class="card__state">{{model.current_observation.display_location.city}}</p>
+            <p class="card__city">{{model.current_observation.display_location.state}}</p>
+            <div class="card__arrow-down"></div>
           </div>
-          <div class="weather__group">
-            <img src="{{model.current_observation.icon_url}}" class="weather__icon" alt="">
-            <p class="weather__temp">{{model.current_observation.temp_f}}</p>
+          <div class="card__group">
+            <div class="card__group--temp">
+            <p class="card__title">Currently:</p>
+              <div class="card__icon-group">
+                <img src="{{model.current_observation.icon_url}}" class="card__icon" alt="">
+                <p class="card__temp">{{model.current_observation.temp_f}}</p>
+              </div>
+            </div>
+            <div class="card__group--temp">
+              <p class="card__title">Feels like:</p>
+              <p class="card__feels">{{model.current_observation.feelslike_f}}</p>
+            </div>
           </div>
-          <p class="weather__feels">Feels like: {{model.current_observation.feelslike_f}}</p>
     </div>
   </div>
 </div>

@@ -1,0 +1,93 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 2rem auto;
+  background: $c-white;
+  width: 60%;
+
+  &__state {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0.3rem 0;
+
+    &::after {
+      content: ',';
+    }
+  }
+
+  &__arrow-down {
+    position: absolute;
+    left: 1.5rem;
+    top: 2.38rem;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid $c-location;
+  }
+
+
+  &__city {
+    padding-left: 0.4rem;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0.3rem 0;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    background: $c-location;
+    width: 100%;
+    color: $c-white;
+  }
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+
+    &--temp {
+      margin-top: 2rem;
+    }
+  }
+
+  &__icon {
+    padding-bottom: 0.4rem;
+    height: 4rem;
+  }
+
+  &__icon-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__temp {
+    margin-top: 0;
+    padding-left: 0.5rem;
+    font-size: 2rem;
+
+    &::after {
+      content: '°';
+    }
+  }
+
+  &__feels {
+    margin-top: 0;
+    text-align: center;
+    font-size: 2rem;
+
+    &::after {
+      content: '°';
+    }
+  }
+}
