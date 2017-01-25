@@ -1,0 +1,31 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+
+  &__label {
+    margin-right: 0.3rem;
+  }
+
+  &__input {
+    margin-right: 0.3rem;
+    background: $c-input;
+    border: 0;
+    font-size: 1rem;
+
+    &:focus {
+      outline: 1px solid $c-white;
+    }
+  }
+
+  &__button {
+    margin-left: 0.3rem;
+    font-size: 1rem;
+    color: $c-input;
+    border: 2px solid $c-input;
+    background: transparent;
+    outline: 0;
+    cursor: pointer;
+  }
+}

@@ -2,76 +2,70 @@
   <div class="hero">
     <div class="hero__main">
       <p class="hero__logo">what's the weather?</p>
-      {{!-- {{#simple-form as |formValues|}}
-        <div class="hero__form">
-          <label for="city" class="hero__label">city</label> {{input class="hero__input" value=formValues.city id="city"}}
-          <label for="state" class="hero__label">state</label>
-          <select class="hero__select" id="state">
-            <option>Alabama</option>
-            <option>Alaska</option>
-            <option>Arizona</option>
-            <option>Arkansas</option>
-            <option>California</option>
-            <option>Colorado</option>
-            <option>Connecticut</option>
-            <option>Delaware</option>
-            <option>Florida</option>
-            <option>Georgia</option>
-            <option>Hawaii</option>
-            <option>Idaho</option>
-            <option>Illinois</option>
-            <option>Indiana</option>
-            <option>Iowa</option>
-            <option>Kansas</option>
-            <option>Kentucky</option>
-            <option>Louisiana</option>
-            <option>Maine</option>
-            <option>Maryland</option>
-            <option>Massachusetts</option>
-            <option>Michigan</option>
-            <option>Minnesota</option>
-            <option>Mississippi</option>
-            <option>Missouri</option>
-            <option>Montana</option>
-            <option>Nebraska</option>
-            <option>Nevada</option>
-            <option>New Hampshire</option>
-            <option>New Jersey</option>
-            <option>New Mexico</option>
-            <option>New York</option>
-            <option>North Carolina</option>
-            <option>North Dakota</option>
-            <option>Ohio</option>
-            <option>Oklahoma</option>
-            <option>Oregon</option>
-            <option>Pennsylvania</option>
-            <option>Rhode Island</option>
-            <option>South Carolina</option>
-            <option>South Dakota</option>
-            <option>Tennessee</option>
-            <option>Texas</option>
-            <option>Utah</option>
-            <option>Vermont</option>
-            <option>Virginia</option>
-            <option>Washington</option>
-            <option>West Virginia</option>
-            <option>Wisconsin</option>
-            <option>Wyoming</option>
-            </select>{{!-- {{#power-select
-            options=state
-            selected=formValues.quantity
-            onchange=(action (mut formValues.quantity))
-            as |value|}}
-            {{value}}
-          {{/power-select}} --}}
-          {{!-- <button class="hero__button">submit</button> --}}
-        {{!-- </div> --}}
-      {{!-- {{/simple-form}} --}}
     </div>
   </div>
 
   <div class="app__main">
     <div class="container">
+      {{#simple-form as |formValues|}}
+        <div class="form">
+          <label for="city" class="form__label">city</label> {{input class="form__input" value=formValues.city id="city"}}
+          <label for="state" class="form__label">state</label>
+          <select class="form__input" id="state">
+            <option value=formvalues.current_observation.display_location.state>AL</option>
+            <option value=formvalues.current_observation.display_location.state>AK</option>
+            <option value=formvalues.current_observation.display_location.state>AZ</option>
+            <option value=formvalues.current_observation.display_location.state>AR</option>
+            <option value=formvalues.current_observation.display_location.state>CA</option>
+            <option value=formvalues.current_observation.display_location.state>CO</option>
+            <option value=formvalues.current_observation.display_location.state>CT</option>
+            <option value=formvalues.current_observation.display_location.state>DE</option>
+            <option value=formvalues.current_observation.display_location.state>FL</option>
+            <option value=formvalues.current_observation.display_location.state>GA</option>
+            <option value=formvalues.current_observation.display_location.state>HI</option>
+            <option value=formvalues.current_observation.display_location.state>ID</option>
+            <option value=formvalues.current_observation.display_location.state>IL</option>
+            <option value=formvalues.current_observation.display_location.state>IN</option>
+            <option value=formvalues.current_observation.display_location.state>IA</option>
+            <option value=formvalues.current_observation.display_location.state>KS</option>
+            <option value=formvalues.current_observation.display_location.state>KY</option>
+            <option value=formvalues.current_observation.display_location.state>LA</option>
+            <option value=formvalues.current_observation.display_location.state>ME</option>
+            <option value=formvalues.current_observation.display_location.state>MD</option>
+            <option value=formvalues.current_observation.display_location.state>MA</option>
+            <option value=formvalues.current_observation.display_location.state>MI</option>
+            <option value=formvalues.current_observation.display_location.state>MN</option>
+            <option value=formvalues.current_observation.display_location.state>MS</option>
+            <option value=formvalues.current_observation.display_location.state>MO</option>
+            <option value=formvalues.current_observation.display_location.state>MT</option>
+            <option value=formvalues.current_observation.display_location.state>NE</option>
+            <option value=formvalues.current_observation.display_location.state>NV</option>
+            <option value=formvalues.current_observation.display_location.state>NH</option>
+            <option value=formvalues.current_observation.display_location.state>NJ</option>
+            <option value=formvalues.current_observation.display_location.state>NM</option>
+            <option value=formvalues.current_observation.display_location.state>NY</option>
+            <option value=formvalues.current_observation.display_location.state>NC</option>
+            <option value=formvalues.current_observation.display_location.state>ND</option>
+            <option value=formvalues.current_observation.display_location.state>OH</option>
+            <option value=formvalues.current_observation.display_location.state>OK</option>
+            <option value=formvalues.current_observation.display_location.state>OR</option>
+            <option value=formvalues.current_observation.display_location.state>PA</option>
+            <option value=formvalues.current_observation.display_location.state>RI</option>
+            <option value=formvalues.current_observation.display_location.state>SC</option>
+            <option value=formvalues.current_observation.display_location.state>SD</option>
+            <option value=formvalues.current_observation.display_location.state>TN</option>
+            <option value=formvalues.current_observation.display_location.state>TX</option>
+            <option value=formvalues.current_observation.display_location.state>UT</option>
+            <option value=formvalues.current_observation.display_location.state>VT</option>
+            <option value=formvalues.current_observation.display_location.state>VA</option>
+            <option value=formvalues.current_observation.display_location.state>WA</option>
+            <option value=formvalues.current_observation.display_location.state>WV</option>
+            <option value=formvalues.current_observation.display_location.state>WI</option>
+            <option value=formvalues.current_observation.display_location.state>WY</option>
+          </select>
+          <button class="form__button">submit</button>
+        </div>
+      {{/simple-form}}
         <div class="weather">
           <div class="weather__group">
             <p class="weather__state">{{model.current_observation.display_location.city}}</p>
