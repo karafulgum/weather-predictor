@@ -11,7 +11,7 @@
         <div class="form">
           <label for="city" class="form__label">city</label> {{input class="form__input" value=city id="city"}}
           <label for="state" class="form__label">state</label>
-          <select class="form__input" id="state" onchange={{action (mut state) value="target.value"}}>
+          <select class="form__input" id="state" onchange= {{action (mut state) value="target.value"}}>
             <option>AL</option>
             <option>AK</option>
             <option>AZ</option>
@@ -66,40 +66,42 @@
           <button class="form__button">submit</button>
         </div>
       {{/simple-form}}
-        <div class="card">
-          <div class="card__header">
-            <p class="card__state">{{model.conditions.current_observation.display_location.city}}</p>
-            <p class="card__city">{{model.conditions.current_observation.display_location.state}}</p>
-            <div class="card__arrow-down"></div>
-          </div>
-          <img src="{{model.conditions.current_observation.icon_url}}" class="card__icon" alt="">
-          <div class="card__group">
-            <div class="card__group--temp">
+
+      <div class="card">
+        <div class="card__header">
+          <p class="card__state">{{model.conditions.current_observation.display_location.city}}</p>
+          <p class="card__city">{{model.conditions.current_observation.display_location.state}}</p>
+          <div class="card__arrow-down"></div>
+        </div>
+        <img src="{{model.conditions.current_observation.icon_url}}" class="card__icon" alt="">
+        <div class="card__group">
+          <div class="card__group--temp">
             <p class="card__title">Currently:</p>
-              <div class="card__icon-group">
-                <p class="card__temp">{{model.conditions.current_observation.temp_f}}</p>
-              </div>
-            </div>
-            <div class="card__group--temp">
-              <p class="card__title">Feels like:</p>
-              <p class="card__feels">{{model.conditions.current_observation.feelslike_f}}</p>
+            <div class="card__icon-group">
+              <p class="card__temp">{{model.conditions.current_observation.temp_f}}</p>
             </div>
           </div>
-          {{log model.forecast}}
-          <div class="card__forecast">
-            {{#each model.forecast.forecast.simpleforecast.forecastday as |value|}}
+          <div class="card__group--temp">
+            <p class="card__title">Feels like:</p>
+            <p class="card__feels">{{model.conditions.current_observation.feelslike_f}}</p>
+          </div>
+        </div>
+        <div class="card__forecast">
+          {{#each model.forecast.forecast.simpleforecast.forecastday as |value|}}
             <div class="card__forecast-group">
               <div class="card__date">
                 <p class="card__date-month">{{value.date.monthname_short}}</p>
                 <p class="card__date-day">{{value.date.day}}</p>
               </div>
               <img src="{{value.icon_url}}" class="card__forecast-icon">
-                <p class="card__high">{{value.high.fahrenheit}}</p>
-                <p class="card__low">{{value.low.fahrenheit}}</p>
+              <p class="card__high">{{value.high.fahrenheit}}</p>
+              <p class="card__low">{{value.low.fahrenheit}}</p>
             </div>
-            {{/each}}
-          </div>
+          {{/each}}
+        </div>
+      </div>
+
+      <p class="footer">Data courtesy of:<img src="../images/wu-logo.png" class="footer__wu-logo"></p>
     </div>
   </div>
-</div>
 </div>

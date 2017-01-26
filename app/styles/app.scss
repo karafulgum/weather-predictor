@@ -9,6 +9,14 @@ $box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
 @import 'components/hero';
 @import 'components/card';
 @import 'components/form';
-// @import 'ember-power-select';
-//
-//
+
+.footer {
+  margin: 0 auto;
+  margin-bottom: 0.3rem;
+  text-align: center;
+
+  &__wu-logo {
+    padding-left: 0.5rem;
+    height: 1.5rem;
+  }
+}
