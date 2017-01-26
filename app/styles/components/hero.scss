@@ -25,3 +25,11 @@
     text-align: center;
   }
 }
+
+@media (max-width: 500px) {
+  .hero {
+    &__main {
+      margin: 2rem;
+    }
+  }
+}

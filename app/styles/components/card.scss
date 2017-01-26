@@ -152,3 +152,9 @@
       }
     }
   }
+
+  @media(max-width: 500px) {
+    .card {
+      min-width: 18rem;
+    }
+  }

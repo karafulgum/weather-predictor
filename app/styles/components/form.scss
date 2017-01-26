@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   padding-top: 2rem;
+  margin: 0 auto;
 
   &__label {
     margin-right: 0.3rem;
@@ -34,16 +35,20 @@
 
 @media(max-width: 500px) {
   .form {
+    display: flex;
+    flex-direction: column;
+
     &__label {
-      font-size: 1rem;
+      margin: 0;
     }
 
     &__input {
-      font-size: 1rem;
+      margin: 0;
     }
 
     &__button {
-      font-size: 1rem;
+      margin: 0;
+      margin-top: 0.5rem;
     }
   }
 }
