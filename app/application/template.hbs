@@ -68,23 +68,29 @@
       {{/simple-form}}
         <div class="card">
           <div class="card__header">
-            <p class="card__state">{{model.current_observation.display_location.city}}</p>
-            <p class="card__city">{{model.current_observation.display_location.state}}</p>
+            <p class="card__state">{{model.conditions.current_observation.display_location.city}}</p>
+            <p class="card__city">{{model.conditions.current_observation.display_location.state}}</p>
             <div class="card__arrow-down"></div>
           </div>
-          <img src="{{model.current_observation.icon_url}}" class="card__icon" alt="">
+          <img src="{{model.conditions.current_observation.icon_url}}" class="card__icon" alt="">
           <div class="card__group">
             <div class="card__group--temp">
             <p class="card__title">Currently:</p>
               <div class="card__icon-group">
-                <p class="card__temp">{{model.current_observation.temp_f}}</p>
+                <p class="card__temp">{{model.conditions.current_observation.temp_f}}</p>
               </div>
             </div>
             <div class="card__group--temp">
               <p class="card__title">Feels like:</p>
-              <p class="card__feels">{{model.current_observation.feelslike_f}}</p>
+              <p class="card__feels">{{model.conditions.current_observation.feelslike_f}}</p>
             </div>
           </div>
+          {{!-- {{log model.forecast}}
+          <div class="card__group">
+            <div class="card__forecast">
+              <p class="card__date">{{model.forecast.forecast.simpleforecast.forecastday.date.monthname_short}}</p>
+            </div>
+          </div> --}}
     </div>
   </div>
 </div>
