@@ -28,6 +28,14 @@
     color: $c-white;
   }
 
+  &__header-error {
+    padding: 0.2rem;
+  }
+
+  &__error {
+    margin: 2rem auto;
+  }
+
   &__city {
     padding-left: 0.4rem;
     font-size: 1.5rem;
