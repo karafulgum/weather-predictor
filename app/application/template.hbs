@@ -85,12 +85,20 @@
               <p class="card__feels">{{model.conditions.current_observation.feelslike_f}}</p>
             </div>
           </div>
-          {{!-- {{log model.forecast}}
-          <div class="card__group">
-            <div class="card__forecast">
-              <p class="card__date">{{model.forecast.forecast.simpleforecast.forecastday.date.monthname_short}}</p>
+          {{log model.forecast}}
+          <div class="card__forecast">
+            {{#each model.forecast.forecast.simpleforecast.forecastday as |value|}}
+            <div class="card__forecast-group">
+              <div class="card__date">
+                <p class="card__date-month">{{value.date.monthname_short}}</p>
+                <p class="card__date-day">{{value.date.day}}</p>
+              </div>
+              <img src="{{value.icon_url}}" class="card__forecast-icon">
+                <p class="card__high">{{value.high.fahrenheit}}</p>
+                <p class="card__low">{{value.low.fahrenheit}}</p>
             </div>
-          </div> --}}
+            {{/each}}
+          </div>
     </div>
   </div>
 </div>

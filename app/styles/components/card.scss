@@ -90,4 +90,65 @@
       content: '°';
     }
   }
-}
+
+  &__forecast {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    border-top: 0.1rem solid $c-location;
+    padding-top: 0.5rem;
+  }
+
+  &__forecast-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-direction: column;
+    margin: 0 auto;
+    min-width: 7rem;
+  }
+
+  &__date {
+    display: flex;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  &__date-month {
+      padding-right: 0.2rem;
+      margin-bottom: 0.3rem;
+      &::after {
+        content: '.';
+      }
+    }
+
+  &__date-day {
+    margin-bottom: 0.3rem;
+  }
+
+    &__high {
+      margin-top: 0.3rem;
+      margin-bottom: 0.3rem;
+      &::before {
+        content: 'High:';
+        padding-right: 0.2rem;
+      }
+      &::after {
+        content: '°';
+      }
+    }
+
+    &__low {
+      margin-top: 0;
+      &::before {
+        content: 'Low:';
+        padding-right: 0.2rem;
+      }
+      &::after {
+        content: '°';
+      }
+    }
+  }

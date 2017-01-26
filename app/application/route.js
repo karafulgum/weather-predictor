@@ -7,7 +7,7 @@ export default Ember.Route.extend({
     return Ember.RSVP.hash({
       conditions: fetch(`http://api.wunderground.com/api/${api}/conditions/q/TN/Nashville.json`)
         .then(res => res.json()),
-      forecast: fetch(`http://api.wunderground.com/api/${api}/forecast10day/q/TN/Nashville.json`)
+      forecast: fetch(`http://api.wunderground.com/api/${api}/forecast/q/TN/Nashville.json`)
         .then(res => res.json()),
     });
   }
